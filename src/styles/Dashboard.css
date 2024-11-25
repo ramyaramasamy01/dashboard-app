@@ -1,0 +1,29 @@
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+   
+  .chart-container, .grid-container {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+  }
+   
+  .reset-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+   
+  @media (min-width: 768px) {
+    .dashboard {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
