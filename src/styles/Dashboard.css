@@ -1,29 +1,150 @@
 .dashboard {
-    display: grid;
-    grid-template-columns: 1fr;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
   }
-   
-  .chart-container, .grid-container {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
+  
+  .dashboard-card {
+    background-color: white;
     border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     padding: 20px;
   }
-   
-  .reset-button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background: #ff4d4f;
-    color: white;
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+  }
+  
+  .button {
+    padding: 8px 16px;
+    border-radius: 4px;
     border: none;
-    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .button.primary {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .button.primary:hover {
+    background-color: #2563eb;
+  }
+  
+  .filter-group {
+    margin-bottom: 16px;
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .range-label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+  }
+  
+  .range-input {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .chart-container {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  th {
+    background-color: #f8fafc;
+    font-weight: 600;
+  }
+  
+  .sortable-header {
     cursor: pointer;
   }
-   
-  @media (min-width: 768px) {
+  
+  .sortable-header:hover {
+    background-color: #f1f5f9;
+  }
+  
+  .sort-indicator {
+    margin-left: 4px;
+  }
+  
+  tr:hover {
+    background-color: #f8fafc;
+  }
+  
+  tr.selected {
+    background-color: #eff6ff;
+  }
+  
+  .tooltip {
+    background-color: white;
+    border-radius: 4px;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+  }
+  
+  .tooltip-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  @media (max-width: 768px) {
     .dashboard {
-      grid-template-columns: 1fr 1fr;
+      padding: 10px;
+    }
+  
+    .dashboard-card {
+      padding: 15px;
+    }
+  
+    .card-header {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
     }
   }
